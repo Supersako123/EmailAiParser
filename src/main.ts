@@ -15,7 +15,7 @@ function getLimit(): number {
   let limit;
   do {
     const input = prompt(
-      "How many emails would you like to scrape and analyze? press Enter to select all emails "
+      "How many emails would you like to scrape and analyze? press Enter to select all emails: "
     );
     limit = Number(input);
     if (!isValidNumber(limit)) {
@@ -33,11 +33,11 @@ async function main() {
   console.log("Page scraping completed");
 
   console.log("Beginning email analysis");
-//  const newEmails = await analyzeEmails(emails);
+  const newEmails = await analyzeEmails(emails);
   console.log("Email analysis completed");
 
   console.log("Writing to sheets");
-  await writeToSheet(emails);
+  await writeToSheet(newEmails);
   console.log("Writing to sheets completed");
 
   exit(1);

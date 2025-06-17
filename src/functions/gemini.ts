@@ -72,7 +72,9 @@ Respond exactly like this:
   "whoIsPrinting": "..."
 }
 
-responses should never be longer than 200 characters long. 
+Requirements:
+- Each response field must be under 200 characters.
+- If a field is unclear or missing, respond with "Unknown".
 `;
 
     const aimodel = process.env.AI_MODEL;

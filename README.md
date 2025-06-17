@@ -2,8 +2,8 @@
 A command-line tool that scrapes Wikileaks data and uses AI to analyze the extracted information for easier review and processing. Finally all data is exported to google sheets
 
 ### Table of Contents
-- [Quick Start](#quick-start)
 - [Overview](#overview)
+- [Quick Start](#quick-start)
 
 ## Overview
 

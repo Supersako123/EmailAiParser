@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 require("dotenv").config();
 
-const key = process.env.API_KEY;
+const key = process.env.AI_API_KEY;
 
 if (key == undefined) {
   throw new Error(

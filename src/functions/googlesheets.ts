@@ -20,8 +20,6 @@ export async function writeToSheet(emails: EmailInfo[]): Promise<void> {
 
   const values = [headers, ...rows];
 
-  console.log(values);
-
   try {
     const response = await sheets.spreadsheets.values.update({
       spreadsheetId,

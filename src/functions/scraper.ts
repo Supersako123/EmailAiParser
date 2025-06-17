@@ -60,7 +60,7 @@ export async function scrapePage(pageNum: number): Promise<EmailInfo[]> {
  * @param limit - Optional maximum number of emails to collect.
  * @returns A Promise that resolves to an array of EmailInfo objects collected across pages.
  */
-export async function scrapePages(limit?: number): Promise<EmailInfo[]> {
+export async function scrapePages(limit: number): Promise<EmailInfo[]> {
   let i = 1; // Current page number iterator
   let emails: EmailInfo[] = []; // Accumulator for all emails collected across pages
 
@@ -76,7 +76,7 @@ export async function scrapePages(limit?: number): Promise<EmailInfo[]> {
     emails.push(...tempEmails);
 
     // Stop if we have reached or exceeded the limit
-    if (limit != null && emails.length >= limit) {
+    if (limit != 0 && emails.length >= limit) {
       emails = emails.slice(0, limit); // Trim to exact limit
       console.log(`Scraper reached limit of ${limit} emails at page ${i}`);
       break;

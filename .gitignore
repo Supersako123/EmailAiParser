@@ -139,4 +139,4 @@ dist
 # credentials
 credentials/credentials.json
 credentials.json
-
+!credentials/   
